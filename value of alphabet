@@ -1,0 +1,35 @@
+# find-alphabet-placed-value
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		String s=" abcdefghijklmnopqrstuvwxyz",u;
+		char a[]=s.toCharArray();
+		for(int i=1;i<=n;i++)
+		{
+		    if(n==i)
+		    {
+		        
+		        System.out.print(a[i]);
+		    }
+		  
+		    else if(n>s.length())
+		    {
+		        
+		        for(int j=i;j<=n;j++)
+		        {
+		           
+    		            int d=s.length()-1;
+    		            int c=n%d;
+    		            if(c==j)
+    		            {
+    		                System.out.print(a[i]);
+    		            }
+		        }
+		        break;
+		    }
+		}
+	}
+}
